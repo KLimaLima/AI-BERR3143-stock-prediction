@@ -1,5 +1,6 @@
 Write-Host "=========================================================="
 Write-Host ">> Getting updates from GitHub"
+git fetch --all --prune
 git pull
 
 Write-Host "
