@@ -6,6 +6,6 @@ $my_result.count
 
 $my_result[0]
 
-$final_data = $my_result[0] -match '([\w-_]+) [\w\d]*'
+$my_result[0] -match '([\w-_]+) [\w\d]*'
 
 $Matches[1]
