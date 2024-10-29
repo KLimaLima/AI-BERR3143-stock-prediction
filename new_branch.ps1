@@ -2,7 +2,7 @@ param ([Parameter(Mandatory)]$branch_name)
 
 Write-Host "=========================================================="
 Write-Host ">> Creating a new branch named $branch_name"
-# git branch $branch_name
+git branch $branch_name
 
 Write-Host "
 {\__/}
@@ -12,9 +12,11 @@ Write-Host "
 Write-Host "=========================================================="
 Start-Sleep -Seconds 1.5
 
-Write-Host ">> Moving to $branch_name"
+Write-Host ">> Moving to branch $branch_name"
 # git checkout $branch_name #old way
-git switch -c $branch_name #this creates and brings current work to new branch
+# git switch -c $branch_name #this creates AND brings current work to new branch
+git switch $branch_name #removed -c flag; now only switches to branch
+# the reason for removing -c is to split responsibility for clearer code
 
 Write-Host "
    _____________________________
