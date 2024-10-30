@@ -1,6 +1,7 @@
 param ([Parameter(Mandatory)]$branch_name)
 
 Write-Host "=========================================================="
+
 Write-Host ">> Creating a new branch named $branch_name"
 git branch $branch_name
 
