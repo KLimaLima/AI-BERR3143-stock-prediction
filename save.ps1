@@ -1,11 +1,51 @@
-$my_data = git branch -v
+param ([Parameter(Mandatory)]$message)
 
-$my_result = $my_data -match '([\w\W]).+\[gone\]'
+Write-Host "=========================================================="
+Start-Sleep -Seconds 1.5
 
-$my_result.count
+Write-Host "Adding files"
+git add .
 
-$my_result[0]
+Write-Host "
+   _____________________________
+  |                             |
+  | *Throws your code calmly*   |
+  |_____________________________|
+        /
+(/O.O)/  ~~~~(your code)
+"
 
-$my_result[0] -match '([\w-_]+) [\w\d]*'
+Write-Host "=========================================================="
+Start-Sleep -Seconds 1.5
 
-$Matches[1]
+Write-Host "Committing change"
+git commit -m "$message"
+
+Write-Host "
+   _____________________________________
+  |                                     |
+  | Committing genoc- I mean your code. |
+  |_____________________________________|
+        /
+(~^-^)~
+"
+
+Write-Host "=========================================================="
+Start-Sleep -Seconds 1.5
+
+Write-Host "Uploading to GitHub"
+git push
+
+Write-Host "
+   ________________________________
+  |                                |
+  | This code is good I promise.   |
+  |________________________________|
+            /
+{\__/}
+(o_o)
+( >(Not good code)
+"
+
+Write-Host "=========================================================="
+Start-Sleep -Seconds 1.5
